@@ -23,27 +23,27 @@ The **NFT MarketTrade Project** is a decentralized marketplace that allows users
 To deploy and interact with this project, you will need:
 
 - **Node.js** (v16 or higher)
-- **Hardhat** or **Foundry** for testing and deployment
+- [Foundry](https://book.getfoundry.sh/) installed
 - **OpenZeppelin Contracts** for security and standard implementations
 - **Forge-Std Library** for debugging and testing
 
 ### Installation Steps
 
-1. Clone the repository and navigate to the project directory:
+1. **Clone the repository and navigate to the project directory:**
    ```bash
-   git clone <repository-url>
-   cd <project-directory>
-   ```
+   git clone https://github.com/ObedCyber/foundry-f24-TokenTradeNft.git
+   cd foundry-f24-TokenTradeNft
+   ``` 
 
-2. Install dependencies (if applicable):
-   ```bash
-   npm install
-   ```
+2. **Install Foundry:**
 
-3. Compile the contracts:
-   ```bash
-   npx hardhat compile
-   ```
+    Follow the official Foundry installation guide [here](https://book.getfoundry.sh/getting-started/installation).
+
+3. **Install dependencies:**
+
+    ```bash
+    forge install
+    ```
 
 ## Core Contracts and Functions
 
