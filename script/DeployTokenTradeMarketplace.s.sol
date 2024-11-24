@@ -13,13 +13,13 @@ import {MyToken} from "../src/MyToken.sol";
 contract DeployTokenTradeMarketplace is Script{
 
     uint256 public constant INITIAL_SUPPLY = 1000 ether;
-    uint256 public DEFAULT_ANVIL_KEY = vm.envString(PRIVATE_KEY);
+    uint256 public DEFAULT_ANVIL_KEY = vm.envUint("PRIVATE_KEY");
     
 
     function run() external returns(MyToken, FirstNFT, SecondNFT, TokenTradeMarketplace, address){
         string memory firstNftImageSvgCode = vm.readFile("./images/image1.svg");
         string memory secondNftImageSvgCode = vm.readFile("./images/image2.svg");
-        address localAddress = vm.envString(LOCAL_ADDRESS);
+        address localAddress = vm.envAddress("LOCAL_ADDRESS");
         
         // this DEFAULT_ANVIL_KEY holds the initial supply of the mytoken
         vm.startBroadcast(DEFAULT_ANVIL_KEY);

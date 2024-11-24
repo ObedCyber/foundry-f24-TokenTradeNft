@@ -25,7 +25,7 @@ contract TokenTradeMarketplaceTest is Test {
     uint256 public constant STARTING_BALANCE = 100 ether;
     uint256 public constant NFT_PRICE = 1 ether;
 
-    address contractOwner = vm.envString(LOCAL_ADDRESS);
+    address contractOwner = vm.envAddress("LOCAL_ADDRESS");
     error OwnableUnauthorizedAccount(address account);
     error TokenTradeMarketplace_InsufficientBalance(uint256 userBalance, uint256 price);
     error TokenTradeMarketplace_NftPriceNotAvailable();
